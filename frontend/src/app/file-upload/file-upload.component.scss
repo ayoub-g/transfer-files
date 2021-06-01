@@ -1,0 +1,67 @@
+.form-container {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  max-width: 500px;
+}
+#logo-container {
+  margin: 1em auto;
+  text-align: center;
+  img {
+    max-width: 96px;
+  }
+}
+
+form {
+  margin: 0 auto;
+}
+#upload {
+  visibility: hidden;
+}
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+form {
+  max-width: 90%;
+}
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+mat-card-title {
+  text-align: center;
+  color: rgb(53, 53, 53);
+  font-size: 1.3rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+mat-icon {
+  color: white;
+}
+
+mat-progress-bar {
+  margin-bottom: 20px;
+}
+span {
+  text-align: center;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 501px) {
+  span {
+    font-size: 1.5rem;
+  }
+  mat-card-title {
+    font-size: 1.6rem;
+  }
+}

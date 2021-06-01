@@ -1,0 +1,55 @@
+<div class="form-container">
+  <mat-card>
+    <div id="logo-container">
+      <img src="../../assets/logo.png" />
+    </div>
+    <mat-card-title>File transfert service</mat-card-title>
+
+    <form [formGroup]="uploadForm">
+      <input
+        id="upload"
+        formControlName="file"
+        type="file"
+        name="image"
+        (change)="onChange($event)"
+        accept="image/*|video/*"
+        multiple
+        #fileUpload
+      />
+      <div class="file-upload">
+        <div class="btn-container">
+          <button
+            mat-mini-fab
+            name="btn_upload"
+            id="btn_upload"
+            color="primary"
+            (click)="onUpload()"
+            disabled="{{ uploadDisabled }}"
+          >
+            <mat-icon>upload_file</mat-icon>
+          </button>
+          <span id="message">{{ message }}</span>
+
+          <button
+            mat-mini-fab
+            color="primary"
+            type="submit"
+            name="btn_attach"
+            id="btn_attach"
+            (click)="fileUpload.click()"
+          >
+            <mat-icon (click)="attachIconClicked()">attach_file</mat-icon>
+          </button>
+        </div>
+
+        <mat-progress-bar
+          mode="determinate"
+          value="{{ progress }}"
+        ></mat-progress-bar>
+      </div>
+
+      <div id="imagePreview" *ngIf="imagePreview && imagePreview !== ''">
+        <img src="{{ imagePreview }}" />
+      </div></form
+  ></mat-card>
+</div>

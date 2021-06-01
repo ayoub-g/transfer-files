@@ -1,0 +1,4 @@
+{
+  "_comment_": "update server ip here",
+  "server": "http://192.168.x.x:3000"
+}
